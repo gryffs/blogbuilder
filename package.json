@@ -1,0 +1,33 @@
+{
+  "name": "blogbuilder",
+  "version": "1.0.0",
+  "description": "A blog management tool.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gryffs/blogbuilder.git"
+  },
+  "author": "gryffs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gryffs/blogbuilder/issues"
+  },
+  "homepage": "https://github.com/gryffs/blogbuilder#readme",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "file-loader": "^0.10.0",
+    "react-hot-loader": "^1.3.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^1.16.3"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
