@@ -13,7 +13,10 @@
     "url": "https://github.com/gryffs/blogbuilder/issues"
   },
   "devDependencies": {
-    "react-scripts": "0.8.5"
+    "chai": "^3.5.0",
+    "mz": "^2.6.0",
+    "react-scripts": "0.8.5",
+    "supertest": "^3.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
