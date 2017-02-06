@@ -12,12 +12,13 @@
   "bugs": {
     "url": "https://github.com/gryffs/blogbuilder/issues"
   },
-  "homepage": "https://github.com/gryffs/blogbuilder#readme",
   "devDependencies": {
     "react-scripts": "0.8.5"
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "express": "^4.14.1",
+    "morgan": "^1.8.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^3.0.2"
