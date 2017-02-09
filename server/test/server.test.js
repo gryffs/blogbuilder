@@ -48,4 +48,12 @@ describe('express serving', () => {
       .expect(200)
       .then(res => expect(res.text).to.contain('<div id="root"></div>'));
   });
+
+  test('responds to the basic graphQL route', () => {
+    return request(app)
+      .get('/graphql?query={hello}')
+      .expect('Content-Type', /json/)
+      .expect(200)
+      .then(res => expect(res.body.data.hello).to.equal('Hello World!'));
+  })
 });
