@@ -9,6 +9,7 @@ Default Timeout has been changed, but it is set back after test runs.
 
 The remaining tests here are to just be sure that the server is running
 correctly by checking that index.html is being served along with favicon
+and the graphQL endpoint is responding to a default query with error
 */
 
 describe('builds application', () => {
@@ -49,11 +50,11 @@ describe('express serving', () => {
       .then(res => expect(res.text).to.contain('<div id="root"></div>'));
   });
 
-  test('responds to the basic graphQL route', () => {
+  test('responds to the basic graphQL route with proper errors', () => {
     return request(app)
-      .get('/graphql?query={hello}')
+      .get('/graphql?query')
       .expect('Content-Type', /json/)
-      .expect(200)
-      .then(res => expect(res.body.data.hello).to.equal('Hello World!'));
+      .expect(400)
+      .then(res => expect(res.body.errors).to.exist);
   })
 });

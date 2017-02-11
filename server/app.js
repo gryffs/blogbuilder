@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const path = require('path');
 const graphqlHTTP = require('express-graphql');
 
+const db = require('./db/db')
 const { schema, root } = require('./graphql/graphqlSchema');
 
 const app = express();
