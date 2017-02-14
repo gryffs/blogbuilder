@@ -1,9 +1,19 @@
-'use strict';
+import express from 'express';
+import bodyParser from 'body-parser';
+import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 
-const app = require('./app');
+import grqlSchema from './data/grqlSchema';
 
 const PORT = process.env.PORT || 9000;
 
+const app = express();
+
+app.use('/graphql', bodyParser.json(), graphqlExpress({ schema: grqlSchema }));
+
+app.use('/graphiql', graphiqlExpress({
+  endpointURL: '/graphql',
+}));
+
 app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
+  console.log(`Server listening on port ${PORT}!`);
 });
