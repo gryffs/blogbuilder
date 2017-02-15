@@ -1,17 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ApolloClient, { createNetworkInterface } from 'apollo-client';
-import { ApolloProvider } from 'react-apollo';
-import App from './App';
+import { browserHistory } from 'react-router';
+
+import Routes from './routes';
+
 import './index.css';
 
-const client = new ApolloClient({
-  networkInterface: createNetworkInterface({ uri: '/graphql'}),
-});
-
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>,
+  <Routes history={browserHistory} />,
   document.getElementById('root')
 );
