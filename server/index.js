@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 
+import './db/db';
 import grqlSchema from './data/grqlSchema';
 
 const PORT = process.env.PORT || 3001;
