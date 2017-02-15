@@ -1,10 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import logo from './logo.svg';
 import './style.css';
 
 export class App extends Component {
+  static propTypes = {
+    data: PropTypes.shape({
+      loading: PropTypes.bool,
+      error: PropTypes.object,
+      testString: PropTypes.string,
+    }).isRequired
+  }
+
   render() {
     if (this.props.data.error) {
       console.log(this.props.data.error)
