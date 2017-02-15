@@ -7,6 +7,7 @@ This repository is using concurrently to run server and client.  In development,
 ###Getting Started###
 
 ```
+  > cd blogbuilder
   > npm install
   > cd client
   > npm install
