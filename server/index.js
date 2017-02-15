@@ -4,7 +4,7 @@ import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 
 import grqlSchema from './data/grqlSchema';
 
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
