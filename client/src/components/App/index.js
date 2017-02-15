@@ -4,7 +4,7 @@ import gql from 'graphql-tag';
 import logo from './logo.svg';
 import './style.css';
 
-class App extends Component {
+export class App extends Component {
   render() {
     if (this.props.data.error) {
       console.log(this.props.data.error)
