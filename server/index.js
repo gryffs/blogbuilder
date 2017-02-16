@@ -4,6 +4,8 @@ import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 
 import './db/db';
 import grqlSchema from './data/grqlSchema';
+// mock data, uncomment for adding mock items to db
+import './db/mockData';
 
 const PORT = process.env.PORT || 3001;
 

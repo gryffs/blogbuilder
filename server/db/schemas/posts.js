@@ -3,7 +3,9 @@ import mongoose from 'mongoose';
 const postsSchema = new mongoose.Schema({
   title: { type: String, required: true },
   article: { type: String, required: true },
+  author: { type: String, required: true },
   tags: Array,
+  categories: Array,
   comments: Array,
   date: { type: Date, default: Date.now },
 });
